@@ -1,0 +1,43 @@
+<div class="filters">
+    <mat-form-field>
+        <mat-label>Sort</mat-label>
+        <mat-select
+            panelClass="sort-select"
+            [(ngModel)]="sort"
+                            
+        >
+
+            <mat-option value="name">Name</mat-option>
+            <mat-option value="-released">Released</mat-option>
+            <mat-option value="-added">Added</mat-option>
+            <mat-option value="-created">Ceated</mat-option>
+            <mat-option value="-updated">Updated</mat-option>
+            <mat-option value="-rating">Rating</mat-option>
+            <mat-option value="metacritic">Metacritic</mat-option>
+
+        </mat-select>
+    </mat-form-field>
+    <div class="games">
+        <div class="game">
+            <div class="game-thumb-container">
+                <img src="data:image/png;base64,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" 
+                alt="thumbnail"
+                class="game-thumbnail"
+                />
+            </div>
+            <div class="game-description">
+                <p class="game-name">Name</p>
+                <div class="game-platforms">
+                    <img 
+                    class="game-platform"
+                    src="https://cdn-icons-png.flaticon.com/512/250/250562.png?w=2000"
+                    alt="slug"
+                    />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+          
