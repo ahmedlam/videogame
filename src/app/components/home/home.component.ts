@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private httpService: HttpService,
     private activatedRoute: ActivatedRoute
-  ) { }
+  ) { }    
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
